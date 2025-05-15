@@ -2,35 +2,144 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Inter", sans-serif;
 }
 
 body {
-  min-width: 375px;
-  width: 100%;
-  min-height: 100vh;
-  background-color: orange;
+  background: linear-gradient(to right, #dbeafe, #f0f9ff);
+  color: #1f2937;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 2em;
+  height: 100vh;
 }
 
 .page {
-  width: 80%;
-  background-color: rgb(255, 72, 0);
-  padding: 2%;
+  background-color: white;
+  padding: 3rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: row;
+  gap: 3rem;
+  max-width: 1000px;
+}
+
+.accounts {
+  flex: 1;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  gap: 2em;
 }
 
-h1 {
-  font-family: sans-serif;
+.accounts h1 {
+  font-size: 3rem;
+  color: #1d4ed8;
+  margin-bottom: 1rem;
 }
 
-iframe {
-  animation: spin 5s linear infinite;
+.accounts h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.accounts h3 {
+  font-size: 1rem;
+  color: #6b7280;
+  margin-bottom: 1.5rem;
+}
+
+.account-dual {
+  display: flex;
+  gap: 1rem;
+}
+
+.account {
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.account:hover {
+  transform: scale(1.05);
+}
+
+.account img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 1rem;
+  border: 3px solid #e5e7eb;
+  margin-bottom: 0.5rem;
+}
+
+.account h2 {
+  font-size: 1rem;
+  color: #374151;
+}
+
+form {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: center;
+}
+
+input {
+  padding: 0.75rem 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.75rem;
+  font-size: 1rem;
+  transition: border 0.2s ease-in-out;
+}
+
+input:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3);
+}
+
+button {
+  padding: 0.75rem 1rem;
+  border: none;
+  border-radius: 0.75rem;
+  background-color: #3b82f6;
+  color: white;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+button:hover {
+  background-color: #2563eb;
+}
+
+a {
+  color: #3b82f6;
+  text-align: center;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+p {
+  font-size: 0.9rem;
+  text-align: center;
+  margin-top: 1rem;
+  color: #6b7280;
+}
+
+p span {
+  font-weight: 600;
+  color: #111827;
+  cursor: pointer;
+}
+
+p span:hover {
+  text-decoration: underline;
 }
